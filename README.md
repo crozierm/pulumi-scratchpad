@@ -15,6 +15,7 @@
 - uv run pulumi up
 
 ## Things I'd like, in no particular priority
+* Unit test patterns (I don't care about coverage for my toy account)
 * Account niceties (for my dev account)
 * * CloudTrace
 * * CloudWatch
