@@ -1,0 +1,10 @@
+name: crozierm-pulumi-scratchpad 
+description: Michael's project to learn Pulumi, as well as keep his AWS dev space tidy.
+runtime:
+  name: python
+  options:
+    toolchain: uv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python
