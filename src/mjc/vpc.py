@@ -69,7 +69,7 @@ def declare_public_subnets(prefix: str,
                                    vpc_id=vpc.id,
                                    cidr_block=cidr_block,
                                    map_public_ip_on_launch=True,
-                                   availability_zone=f"{region}-{az}")
+                                   availability_zone=f"{region}{az}")
 
     _route_table_association_az1 = aws.ec2.RouteTableAssociation(f"{prefix}-public-route-table-association-{az}",
                                                                  subnet_id=pub_subnet_az.id,
@@ -87,7 +87,7 @@ def declare_private_subnet(prefix: str,
                                     vpc_id=vpc.id,
                                     cidr_block=cidr,
                                     map_public_ip_on_launch=False,
-                                    availability_zone=f"{region}-{az}")
+                                    availability_zone=f"{region}{az}")
 
     # Create NAT Gateways in az1 and az2
     private_nat_eip = aws.ec2.Eip(f"{prefix}-private-nat-eip-{az}", domain="vpc")
